@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Emissão de Nota Fiscal</title>
+</head>
+
+<body>
+  <h1>Emissão de Nota Fiscal (NFS-e)</h1>
+
+  <label for="valorVenda">Valor da Venda (R$):</label>
+  <input type="number" id="valorVenda" placeholder="Digite o valor da venda" required>
+
+  <label for="itens">Itens Vendidos:</label>
+  <input type="text" id="itens" placeholder="Digite os itens vendidos" required>
+
+  <label for="irpf">Porcentagem do Imposto (IRPF):</label>
+  <input type="number" id="irpf" placeholder="Digite a porcentagem do IRPF" required>
+
+  <label for="pis">Porcentagem do Imposto (PIS):</label>
+  <input type="number" id="pis" placeholder="Digite a porcentagem do PIS" required>
+
+  <label for="cofins">Porcentagem do Imposto (COFINS):</label>
+  <input type="number" id="cofins" placeholder="Digite a porcentagem do COFINS" required>
+
+  <label for="inss">Porcentagem do Imposto (INSS):</label>
+  <input type="number" id="inss" placeholder="Digite a porcentagem do INSS" required>
+
+  <label for="issqn">Porcentagem do Imposto (ISSQN):</label>
+  <input type="number" id="issqn" placeholder="Digite a porcentagem do ISSQN" required>
+
+  <button onclick="gerarNotaFiscal()">Gerar Nota Fiscal</button>
+
+  <div id="notaFiscal" style="display:none;">
+    <h3>Nota Fiscal de Serviço</h3>
+    <p><strong>Valor da Venda:</strong> R$ <span id="valorVendaNota"></span></p>
+    <p><strong>Itens Vendidos:</strong> <span id="itensNota"></span></p>
+    <p><strong>IRPF (Imposto de Renda Pessoa Física):</strong> R$ <span id="irpfNota"></span></p>
+    <p><strong>PIS:</strong> R$ <span id="pisNota"></span></p>
+    <p><strong>COFINS:</strong> R$ <span id="cofinsNota"></span></p>
+    <p><strong>INSS:</strong> R$ <span id="inssNota"></span></p>
+    <p><strong>ISSQN:</strong> R$ <span id="issqnNota"></span></p>
+    <p><strong>Total de Impostos:</strong> R$ <span id="totalImpostosNota"></span></p>
+    <p><strong>Total após Impostos:</strong> R$ <span id="totalFinalNota"></span></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
